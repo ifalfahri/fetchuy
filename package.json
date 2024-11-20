@@ -1,0 +1,37 @@
+{
+  "name": "fetchs",
+  "version": "0.0.1",
+  "description": "A reusable fetch function for HTTP requests with caching and retry logic.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fetch",
+    "http",
+    "api",
+    "reuse",
+    "caching",
+    "retry",
+    "request"
+  ],
+  "author": "ifalfahri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifalfahri/fetchs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ifalfahri/fetchs/issues"
+  },
+  "homepage": "https://github.com/ifalfahri/fetchs#readme",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@testing-library/jest-dom": "^6.6.3",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}
