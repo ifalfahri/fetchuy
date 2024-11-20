@@ -27,8 +27,3 @@ Thumbs.db
 .env.local
 .env.*.local
 
-# Jest cache
-jest-cache/
-
-# Optional: Ignore tests if you want to exclude them from version control (usually not recommended)
-# tests/
