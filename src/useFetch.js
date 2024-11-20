@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchs } from './fetchs'; 
+import { fetc } from './fetc'; 
 
 /**
  * Custom React hook for fetching data.
@@ -16,7 +16,7 @@ export const useFetch = (url, options = {}) => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const result = await fetchs(url, options);  // Use fetchs function
+        const result = await fetc(url, options);  // Use fetchs function
         setData(result);
       } catch (err) {
         setError(err.message);
