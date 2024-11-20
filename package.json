@@ -1,5 +1,5 @@
 {
-  "name": "fetc",
+  "name": "fetcho",
   "version": "0.0.1",
   "description": "A reusable fetch function for HTTP requests with caching and retry logic.",
   "type": "module",
