@@ -1,6 +1,6 @@
 {
   "name": "fetchuy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A reusable fetch function for HTTP requests with caching and retry logic.",
   "type": "module",
   "main": "src/index.js",
@@ -20,12 +20,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ifalfahri/fetchs.git"
+    "url": "git+https://github.com/ifalfahri/fetchuy.git"
   },
-  "bugs": {
-    "url": "https://github.com/ifalfahri/fetchs/issues"
-  },
-  "homepage": "https://github.com/ifalfahri/fetchs#readme",
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
