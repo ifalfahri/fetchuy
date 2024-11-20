@@ -4,7 +4,7 @@
  * @param {object} options - The configuration options for the request.
  * @returns {Promise<object>} The response data in JSON format.
  */
-export const fetcho = async (url, options = {}) => {
+export const fetchuy = async (url, options = {}) => {
     const defaultOptions = {
       method: 'GET',  // Default method is GET
       headers: {

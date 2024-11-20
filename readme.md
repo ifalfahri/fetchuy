@@ -1,13 +1,13 @@
-# 📦 fetcho - A Reusable Fetch Utility
+# 📦 fetchuy - A Reusable Fetch Utility
 
-**fetcho** is a lightweight and reusable utility for making HTTP requests (GET, POST, PUT, etc.) with support for caching, retries, and a React hook. It provides an easy-to-use way to handle API requests across your JavaScript and React applications.
+**fetchuy** is a lightweight and reusable utility for making HTTP requests (GET, POST, PUT, etc.) with support for caching, retries, and a React hook. It provides an easy-to-use way to handle API requests across your JavaScript and React applications.
 
 ## 📥 Installation
 
 Install the package using npm:
 
 ```bash
-npm install fetcho
+npm install fetchuy
 ```
 
 ## 🌟 Features
@@ -31,15 +31,15 @@ npm install fetcho
 ## 🚀 Getting Started
 ### 1. Basic Fetching
 ```javascript
-import { fetcho } from 'fetcho';
+import { fetchuy } from 'fetchuy';
 
-fetcho('https://api.example.com/data')
+fetchuy('https://api.example.com/data')
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
 ```
 ### 2. React Hook: `useFetch`
 ``` javascript
-import { useFetch } from 'fetcho';
+import { useFetch } from 'fetchuy';
 
 const MyComponent = () => {
   const { data, error, loading } = useFetch('https://api.example.com/data');
@@ -53,9 +53,9 @@ const MyComponent = () => {
 
 ### 3. Caching with `useCache`
 ``` javascript
-import { useCache } from 'fetcho';
+import { useCache } from 'fetchuy';
 
-const fetchData = () => fetcho('https://api.example.com/data');
+const fetchData = () => fetchuy('https://api.example.com/data');
 
 useCache('data_key', fetchData)
   .then(data => console.log('Cached data:', data))
@@ -64,9 +64,9 @@ useCache('data_key', fetchData)
 
 ### 4. Retry Logic
 ``` javascript
-import { retryFetch } from 'fetcho';
+import { retryFetch } from 'fetchuy';
 
-const fetchData = () => fetcho('https://api.example.com/data')
+const fetchData = () => fetchuy('https://api.example.com/data')
 
 retryFetch(fetchData, 3, 1000)
   .then(data => console.log('Data:', data))
@@ -75,7 +75,7 @@ retryFetch(fetchData, 3, 1000)
 
 ## 📚 API Documentation
 
-### `fetcho(url, options = {})`
+### `fetchuy(url, options = {})`
 A reusable function for making HTTP requests. It wraps the native `fetch` API with added convenience, such as default headers, credentials, and error handling.
 
 **Parameters:**
@@ -103,7 +103,7 @@ const defaultOptions = {
 **Example Usage:**
 ```javascript
 // Making a GET request
-fetcho('https://api.example.com/data')
+fetchuy('https://api.example.com/data')
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
 
@@ -113,7 +113,7 @@ const postData = {
   age: 30
 };
 
-fetcho('https://api.example.com/submit', {
+fetchuy('https://api.example.com/submit', {
   method: 'POST',
   body: JSON.stringify(postData),
   headers: {
@@ -129,7 +129,7 @@ A React hook for fetching data in functional components. It manages the loading,
 
 **Parameters:**
 - `url` (string): The URL to fetch data from.
-- `options` (object): Additional options to pass to the `fetcho` function. These options are merged with the default ones.
+- `options` (object): Additional options to pass to the `fetchuy` function. These options are merged with the default ones.
   
 **Returns:**
 - An object containing:
@@ -139,7 +139,7 @@ A React hook for fetching data in functional components. It manages the loading,
   - 
 **Example Usage:**
 ```javascript
-import { useFetch } from 'fetcho';
+import { useFetch } from 'fetchuy';
 
 const MyComponent = () => {
   const { data, error, loading } = useFetch('https://api.example.com/data');
@@ -152,11 +152,11 @@ const MyComponent = () => {
 ```
 **Custom Options in `useFetch`:**
 
-The `options` parameter in `useFetch` works the same as the `options` in `fetcho`. You can use it to customize the request, for example, by changing the HTTP method or adding custom headers.
+The `options` parameter in `useFetch` works the same as the `options` in `fetchuy`. You can use it to customize the request, for example, by changing the HTTP method or adding custom headers.
 
 **Example Usage with Custom Options:**
 ```javascript
-import { useFetch } from 'fetcho';
+import { useFetch } from 'fetchuy';
 
 const MyComponent = () => {
   const { data, error, loading } = useFetch('https://api.example.com/data', {
@@ -173,7 +173,7 @@ const MyComponent = () => {
   return <div>Data: {JSON.stringify(data)}</div>;
 };
 ``` 
-## Option Overview for `useFetch` and `fetcho`
+## Option Overview for `useFetch` and `fetchuy`
 The options parameter can be used to pass various configuration values to customize how the request is made. Here's a quick overview:
 | Option        | Type              | Description                                                                 |
 |---------------|-------------------|-----------------------------------------------------------------------------|
@@ -195,9 +195,9 @@ A simple caching system to store API responses. This function checks if the requ
 
 **Example Usage:**
 ```javascript
-import { useCache } from 'fetcho';
+import { useCache } from 'fetchuy';
 
-const fetchData = () => fetcho('https://api.example.com/data');
+const fetchData = () => fetchuy('https://api.example.com/data');
 
 const cachedData = useCache('dataKey', fetchData);
 cachedData.then(data => console.log(data));
@@ -216,9 +216,9 @@ Retries a failed fetch request for a specified number of times with a delay betw
   
 **Example Usage:**
 ```javascript
-import { retryFetch } from 'fetcho';
+import { retryFetch } from 'fetchuy';
 
-const fetchData = () => fetcho('https://api.example.com/data');
+const fetchData = () => fetchuy('https://api.example.com/data');
 
 retryFetch(fetchData, 3, 1000)
   .then(data => console.log(data))
